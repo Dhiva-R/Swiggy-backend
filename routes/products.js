@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
         if (isValid) {
             uploadError = null;
         }
-        cb(uploadError, 'https://eshop-backend-bluebits.herokuapp.com/api/v1/');
+        cb(uploadError, '/public/uploads');
     },
     filename: function (req, file, cb) {
         const fileName = file.originalname.split(' ').join('-');
